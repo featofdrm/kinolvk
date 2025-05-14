@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KinoLavka - О нас. Узнайте больше о нашем проекте и команде.">
+    <meta name="keywords" content="о нас, команда, история, миссия, контакты">
+    <meta name="theme-color" content="#0f0f1a">
+    <title>KinoLavka - О нас</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <div class="loading"></div>
+    
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+        <h1>KinoLavka</h1>
+            </a>
+        <nav>
+            <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="films.html"><i class="fas fa-film"></i> Фильмы</a></li>
+                    <li><a href="series.html"><i class="fas fa-tv"></i> Сериалы</a></li>
+                    <li><a href="gallery.html"><i class="fas fa-images"></i> Фотогалерея</a></li>
+                    <li><a href="registration.html"><i class="fas fa-user-plus"></i> Регистрация</a></li>
+                    <li><a href="lists-tables.html"><i class="fas fa-list"></i> Списки и таблицы</a></li>
+                    <li><a href="about.html" class="active" aria-current="page"><i class="fas fa-info-circle"></i> О нас</a></li>
+            </ul>
+        </nav>
+<div class="search">
+                <input type="text" id="searchInput" placeholder="Поиск..." aria-label="Поиск">
+                <button id="searchButton" aria-label="Начать поиск"><i class="fas fa-search"></i></button>
+                <div id="searchResults" class="search-results" role="listbox"></div>
+            </div>
+</div>
+    </header>
+
+    <main class="about-page">
+        <section class="page-header">
+            <div class="header-content">
+                <h1>О нас</h1>
+                <p>Узнайте больше о нашем проекте и команде</p>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="about-container">
+                <!-- История и миссия -->
+                <div class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-history"></i> Наша история</h2>
+                    </div>
+                    <div class="card-content">
+                        <p>KinoLavka была основана в 2025 году группой энтузиастов, объединенных любовью к кинематографу. Наша цель - создать удобную платформу для всех любителей кино и сериалов, где каждый сможет найти что-то по душе и поделиться своими впечатлениями с единомышленниками.</p>
+                        <div class="mission-vision">
+                            <div class="mission">
+                                <h3><i class="fas fa-bullseye"></i> Миссия</h3>
+                                <p>Предоставлять качественный контент и создавать комфортное пространство для обсуждения фильмов и сериалов, объединяя людей со схожими интересами.</p>
+                            </div>
+                            <div class="vision">
+                                <h3><i class="fas fa-eye"></i> Видение</h3>
+                                <p>Стать ведущей платформой для киноманов, объединяющей людей со всего мира и помогающей каждому найти свой идеальный фильм или сериал.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Наша команда -->
+                <div class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-users"></i> Наша команда</h2>
+                    </div>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <div class="member-photo">
+                                <img src="images/team/ceo.jpg" alt="Александр Петров">
+                                <div class="social-links">
+                                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                            <h3>Александр Петров</h3>
+                            <span class="position">CEO & Основатель</span>
+                            <p>Более 10 лет опыта в индустрии развлечений</p>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-photo">
+                                <img src="images/team/cto.jpg" alt="Мария Иванова">
+                                <div class="social-links">
+                                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                            <h3>Мария Иванова</h3>
+                            <span class="position">CTO</span>
+                            <p>Эксперт в области веб-разработки и UX/UI</p>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-photo">
+                                <img src="images/team/content.jpg" alt="Дмитрий Смирнов">
+                                <div class="social-links">
+                                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <h3>Дмитрий Смирнов</h3>
+                            <span class="position">Главный редактор</span>
+                            <p>Киновед с 15-летним стажем</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Наши достижения -->
+                <div class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-trophy"></i> Наши достижения</h2>
+                    </div>
+                    <div class="achievements-grid">
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="achievement-info">
+                                <h3>1M+</h3>
+                                <p>Пользователей</p>
+                            </div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <i class="fas fa-film"></i>
+                            </div>
+                            <div class="achievement-info">
+                                <h3>50K+</h3>
+                                <p>Фильмов и сериалов</p>
+                            </div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="achievement-info">
+                                <h3>4.8</h3>
+                                <p>Средний рейтинг</p>
+                            </div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="achievement-info">
+                                <h3>150+</h3>
+                                <p>Стран</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Контакты -->
+                <div class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-envelope"></i> Свяжитесь с нами</h2>
+                    </div>
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h3>Адрес</h3>
+                                    <p>г. Москва, ул. Киношная, 123</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h3>Телефон</h3>
+                                    <p>+7 (999) 123-45-67</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h3>Email</h3>
+                                    <p>info@kinolavka.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <input type="text" placeholder="Ваше имя" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Ваш email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea placeholder="Ваше сообщение" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">Отправить сообщение</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>О нас</h3>
+                    <p>KinoLavka - ваш надежный источник качественного контента. Мы предлагаем широкий выбор фильмов и сериалов для каждого зрителя.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="about.html">О проекте</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                        <li><a href="privacy.html">Политика конфиденциальности</a></li>
+                        <li><a href="terms.html">Условия использования</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Подпишитесь на новости</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Ваш email" required>
+                        <button type="submit" class="btn">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+        <p>&copy; 2025 KinoLavka. Все права защищены.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+<script>
+        // Удаление анимации загрузки после загрузки страницы
+        window.addEventListener('load', () => {
+            const loading = document.querySelector('.loading');
+            loading.style.opacity = '0';
+            setTimeout(() => {
+                loading.style.display = 'none';
+            }, 500);
+        });
+
+        // Кнопка прокрутки наверх
+        const scrollTop = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+        });
+
+        scrollTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Обработка формы контактов
+        const contactForm = document.querySelector('.contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                // Здесь будет логика отправки формы
+                alert('Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.');
+                contactForm.reset();
+            });
+        }
+</script>
+</body>
+</html>

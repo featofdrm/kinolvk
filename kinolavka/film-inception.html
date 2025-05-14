@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Начало (2010) - KinoLavka</title>
+    <meta name="description" content="Начало - захватывающий научно-фантастический триллер Кристофера Нолана о технологии проникновения в сны и манипуляции сознанием.">
+    <meta name="keywords" content="Начало, Inception, Кристофер Нолан, Леонардо Ди Каприо, научная фантастика, триллер">
+    <meta name="theme-color" content="#0f0f1a">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <div class="loading"></div>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <h1>KinoLavka</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="films.html"><i class="fas fa-film"></i> Фильмы</a></li>
+                    <li><a href="series.html"><i class="fas fa-tv"></i> Сериалы</a></li>
+                    <li><a href="gallery.html"><i class="fas fa-images"></i> Галерея</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                </ul>
+            </nav>
+            <div class="search">
+                <input type="text" id="searchInput" placeholder="Поиск фильмов и сериалов...">
+                <button id="searchButton"><i class="fas fa-search"></i></button>
+                <div class="search-results"></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="movie-page">
+        <section class="movie-hero">
+            <div class="hero-backdrop" style="background-image: url('images/inception-bg.jpg');"></div>
+            <div class="hero-content">
+                <div class="movie-poster">
+                    <img src="images/inception.jpg" alt="Начало">
+                    <div class="movie-rating">
+                        <i class="fas fa-star"></i>
+                        <span>8.8</span>
+                    </div>
+                </div>
+                <div class="movie-info">
+                    <h1>Начало</h1>
+                    <div class="movie-meta">
+                        <span><i class="fas fa-calendar"></i> 2010</span>
+                        <span><i class="fas fa-clock"></i> 148 мин</span>
+                        <span><i class="fas fa-film"></i> США, Великобритания</span>
+                    </div>
+                    <div class="movie-genres">
+                        <span class="genre-tag">фантастика</span>
+                        <span class="genre-tag">боевик</span>
+                        <span class="genre-tag">триллер</span>
+                    </div>
+                    <p class="movie-description">
+                        Коббу дается шанс на искупление. Вместо идеальной кражи Кобб и его команда спецов 
+                        будут вынуждены совершить ограбление с обратной задачей - не украсть идею, а внедрить 
+                        её. Если у них получится, это и станет идеальным преступлением. Но никакое планирование 
+                        или мастерство не могут подготовить команду к встрече с опасным противником, который, 
+                        кажется, предугадывает каждый их ход.
+                    </p>
+                    <div class="movie-actions">
+                        <button class="btn btn-primary"><i class="fas fa-play"></i> Смотреть</button>
+                        <button class="btn btn-secondary"><i class="fas fa-heart"></i> В избранное</button>
+                        <button class="btn btn-secondary"><i class="fas fa-share"></i> Поделиться</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="movie-details">
+            <div class="details-container">
+                <div class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-users"></i> В ролях</h2>
+                    </div>
+                    <div class="cast-grid">
+                        <div class="cast-member">
+                            <img src="images/cast/dicaprio.jpg" alt="Леонардо Ди Каприо">
+                            <h3>Леонардо Ди Каприо</h3>
+                            <p>Доминик Кобб</p>
+                        </div>
+                        <div class="cast-member">
+                            <img src="images/cast/hardy.jpg" alt="Том Харди">
+                            <h3>Том Харди</h3>
+                            <p>Имс</p>
+                        </div>
+                        <div class="cast-member">
+                            <img src="images/cast/page.jpg" alt="Эллен Пейдж">
+                            <h3>Эллен Пейдж</h3>
+                            <p>Ариадна</p>
+                        </div>
+                        <div class="cast-member">
+                            <img src="images/cast/murphy.jpg" alt="Киллиан Мерфи">
+                            <h3>Киллиан Мерфи</h3>
+                            <p>Роберт Фишер</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-comments"></i> Отзывы</h2>
+                    </div>
+                    <div class="reviews-list">
+                        <div class="review-item">
+                            <div class="review-header">
+                                <img src="images/avatars/user3.jpg" alt="Аватар пользователя">
+                                <div class="review-info">
+                                    <h3>Дмитрий В.</h3>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="review-date">12.03.2024</span>
+                                </div>
+                            </div>
+                            <p class="review-text">
+                                Гениальный фильм! Каждый раз при просмотре открываешь для себя новые детали 
+                                и смыслы. Визуальные эффекты, музыка и актерская игра на высшем уровне. 
+                                Нолан создал настоящий шедевр.
+                            </p>
+                        </div>
+                        <div class="review-item">
+                            <div class="review-header">
+                                <img src="images/avatars/user4.jpg" alt="Аватар пользователя">
+                                <div class="review-info">
+                                    <h3>Елена М.</h3>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="review-date">08.03.2024</span>
+                                </div>
+                            </div>
+                            <p class="review-text">
+                                Фильм заставляет думать и анализировать каждый кадр. Сюжет настолько 
+                                продуман, что каждая деталь имеет значение. Особенно впечатлила 
+                                сцена с вращающимся коридором.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-film"></i> Похожие фильмы</h2>
+                    </div>
+                    <div class="similar-movies-grid">
+                        <div class="movie-card">
+                            <img src="images/movies/shutter-island.jpg" alt="Остров проклятых">
+                            <div class="movie-card-content">
+                                <h3>Остров проклятых</h3>
+                                <div class="movie-card-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>8.2</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="images/movies/prestige.jpg" alt="Престиж">
+                            <div class="movie-card-content">
+                                <h3>Престиж</h3>
+                                <div class="movie-card-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>8.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="images/movies/matrix.jpg" alt="Матрица">
+                            <div class="movie-card-content">
+                                <h3>Матрица</h3>
+                                <div class="movie-card-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>8.7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>О KinoLavka</h3>
+                    <p>Ваш надежный источник информации о фильмах и сериалах. Мы помогаем вам находить 
+                    лучшее кино и делиться впечатлениями с другими зрителями.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="films.html">Фильмы</a></li>
+                        <li><a href="series.html">Сериалы</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Подпишитесь на новости</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Ваш email">
+                        <button type="submit" class="btn">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-vk"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 KinoLavka. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="theme-toggle" aria-label="Переключить тему">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <button class="scroll-top" aria-label="Наверх">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Loading animation
+        window.addEventListener('load', () => {
+            document.querySelector('.loading').style.display = 'none';
+        });
+
+        // Scroll to top button
+        const scrollTopBtn = document.querySelector('.scroll-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Theme toggle
+        const themeToggle = document.querySelector('.theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            const icon = themeToggle.querySelector('i');
+            icon.classList.toggle('fa-moon');
+            icon.classList.toggle('fa-sun');
+        });
+
+        // Button actions
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (this.classList.contains('btn-primary')) {
+                    alert('Начинаем воспроизведение фильма...');
+                } else if (this.classList.contains('btn-secondary')) {
+                    if (this.querySelector('.fa-heart')) {
+                        this.classList.toggle('active');
+                        const icon = this.querySelector('i');
+                        icon.classList.toggle('fas');
+                        icon.classList.toggle('far');
+                    } else if (this.querySelector('.fa-share')) {
+                        alert('Поделиться фильмом');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

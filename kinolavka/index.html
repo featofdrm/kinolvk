@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KinoLavka - ваш источник лучших фильмов и сериалов. Смотрите новинки кино, популярные сериалы и классику мирового кинематографа.">
+    <meta name="keywords" content="фильмы, сериалы, кино, онлайн, смотреть фильмы, смотреть сериалы">
+    <meta name="theme-color" content="#0f0f1a">
+    <title>KinoLavka - Главная</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta http-equiv="Content-Security-Policy" 
+          content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.youtube.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' data: https:; font-src 'self' https://cdnjs.cloudflare.com;">
+</head>
+<body class="index-page"> <!-- Добавлен класс index-page -->
+    <div class="loading"></div>
+    
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <h1>KinoLavka</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active" aria-current="page"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="films.html"><i class="fas fa-film"></i> Фильмы</a></li>
+                    <li><a href="series.html"><i class="fas fa-tv"></i> Сериалы</a></li>
+                    <li><a href="gallery.html"><i class="fas fa-images"></i> Фотогалерея</a></li>
+                    <li><a href="registration.html"><i class="fas fa-user-plus"></i> Регистрация</a></li>
+                    <li><a href="lists-tables.html"><i class="fas fa-list"></i> Списки и таблицы</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                </ul>
+            </nav>
+            <div class="search">
+                <input type="text" id="searchInput" placeholder="Поиск фильмов и сериалов..." aria-label="Поиск">
+                <button id="searchButton" aria-label="Начать поиск"><i class="fas fa-search"></i></button>
+                <div id="searchResults" class="search-results" role="listbox"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Добро пожаловать на KinoLavka!</h2>
+                <p>Здесь вы найдете подборки лучших фильмов и сериалов, рейтинги и обзоры.</p>
+                <div class="hero-buttons">
+                    <a href="#featured" class="btn btn-primary">Смотреть подборки <i class="fas fa-arrow-right"></i></a>
+                    <a href="registration.html" class="btn btn-secondary">Зарегистрироваться <i class="fas fa-user-plus"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured" class="featured">
+            <div class="section-header">
+                <h2>Популярные фильмы</h2>
+                <a href="films.html" class="view-all">Смотреть все <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-rating">
+                        <i class="fas fa-star"></i>
+                        <span>9.2</span>
+                    </div>
+                    <img src="images/interstellar.jpg" alt="Интерстеллар" loading="lazy">
+                    <div class="card-content">
+                        <div class="card-genre">Фантастика, Приключения</div>
+                        <h3>Интерстеллар</h3>
+                        <p>Эпическая научная фантастика о космическом путешествии</p>
+                        <div class="card-footer">
+                            <span class="card-year">2014</span>
+                            <a href="film-interstellar.html" class="btn">Подробнее <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-rating">
+                        <i class="fas fa-star"></i>
+                        <span>8.8</span>
+                    </div>
+                    <img src="images/inception.jpg" alt="Начало" loading="lazy">
+                    <div class="card-content">
+                        <div class="card-genre">Триллер, Фантастика</div>
+                        <h3>Начало</h3>
+                        <p>Захватывающий триллер о проникновении в сны</p>
+                        <div class="card-footer">
+                            <span class="card-year">2010</span>
+                            <a href="film-inception.html" class="btn">Подробнее <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-rating">
+                        <i class="fas fa-star"></i>
+                        <span>9.3</span>
+                    </div>
+                    <img src="images/forrest-gump.jpg" alt="Форрест Гамп" loading="lazy">
+                    <div class="card-content">
+                        <div class="card-genre">Драма, Комедия</div>
+                        <h3>Форрест Гамп</h3>
+                        <p>Трогательная история о жизни Форреста Гампа</p>
+                        <div class="card-footer">
+                            <span class="card-year">1994</span>
+                            <a href="film-forrest-gump.html" class="btn">Подробнее <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured">
+            <div class="section-header">
+                <h2>Популярные сериалы</h2>
+                <a href="series.html" class="view-all">Смотреть все <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-rating">
+                        <i class="fas fa-star"></i>
+                        <span>9.3</span>
+                    </div>
+                    <img src="images/got.jpg" alt="Игра престолов" loading="lazy">
+                    <div class="card-content">
+                        <div class="card-genre">Фэнтези, Драма</div>
+                        <h3>Игра престолов</h3>
+                        <p>Эпическая сага о борьбе за Железный трон</p>
+                        <div class="card-footer">
+                            <span class="card-year">2011-2019</span>
+                            <a href="series-got.html" class="btn">Подробнее <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-rating">
+                        <i class="fas fa-star"></i>
+                        <span>8.6</span>
+                    </div>
+                    <img src="images/cobra-kai.jpg" alt="Кобра Кай" loading="lazy">
+                    <div class="card-content">
+                        <div class="card-genre">Драма, Спорт</div>
+                        <h3>Кобра Кай</h3>
+                        <p>Продолжение легендарной истории о карате</p>
+                        <div class="card-footer">
+                            <span class="card-year">2018-н.в.</span>
+                            <a href="series-cobra-kai.html" class="btn">Подробнее <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-rating">
+                        <i class="fas fa-star"></i>
+                        <span>8.8</span>
+                    </div>
+                    <img src="images/black-mirror.jpg" alt="Черное зеркало" loading="lazy">
+                    <div class="card-content">
+                        <div class="card-genre">Фантастика, Триллер</div>
+                        <h3>Черное зеркало</h3>
+                        <p>Антология о темной стороне технологий</p>
+                        <div class="card-footer">
+                            <span class="card-year">2011-н.в.</span>
+                            <a href="series-black-mirror.html" class="btn">Подробнее <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <h2>Жанры</h2>
+            <div class="category-grid">
+                <a href="#" class="category-card" style="background-image: url('images/genres/action.jpg')">
+                    <span>Боевики</span>
+                </a>
+                <a href="#" class="category-card" style="background-image: url('images/genres/comedy.jpg')">
+                    <span>Комедии</span>
+                </a>
+                <a href="#" class="category-card" style="background-image: url('images/genres/drama.jpg')">
+                    <span>Драмы</span>
+                </a>
+                <a href="#" class="category-card" style="background-image: url('images/genres/horror.jpg')">
+                    <span>Ужасы</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>О нас</h3>
+                    <p>KinoLavka - ваш надежный источник качественного контента. Мы предлагаем широкий выбор фильмов и сериалов для каждого зрителя.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="about.html">О проекте</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                        <li><a href="privacy.html">Политика конфиденциальности</a></li>
+                        <li><a href="terms.html">Условия использования</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Подпишитесь на новости</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Ваш email" required>
+                        <button type="submit" class="btn">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 KinoLavka. Все права защищены.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Удаление анимации загрузки после загрузки страницы
+        window.addEventListener('load', () => {
+            const loading = document.querySelector('.loading');
+            loading.style.opacity = '0';
+            setTimeout(() => {
+                loading.style.display = 'none';
+            }, 500);
+        });
+
+        // Кнопка прокрутки наверх
+        const scrollTop = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+        });
+
+        scrollTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        document.getElementById('themeToggle').addEventListener('click', () => {
+            document.body.classList.toggle('theme-dark');
+        });
+        // Анимация 
+        const hero = document.querySelector('.hero');
+        if (hero) {
+            hero.style.opacity = '0';
+            setTimeout(() => {
+                hero.style.transition = 'opacity 1s ease';
+                hero.style.opacity = '1';
+            }, 300);
+        }
+
+        // Обработка кнопки "Узнать больше"
+        const aboutBtn = document.querySelector('.hero .btn');
+        if (aboutBtn) {
+            aboutBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector('main').scrollIntoView({ behavior: 'smooth' });
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Общие обработчики для всех страниц
+            
+            // Анимация при наведении на навигационные ссылки
+            const navLinks = document.querySelectorAll('nav ul li a');
+            navLinks.forEach(link => {
+                link.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.1)';
+                });
+                link.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        
+            // Обработка поиска
+            const searchForm = document.querySelector('.search');
+            if (searchForm) {
+                searchForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const query = this.querySelector('input').value.trim();
+                    if (query) {
+                        alert(`Вы искали: ${query}\nПоиск будет реализован в будущем!`);
+                        this.querySelector('input').value = '';
+                    }
+                });
+            }
+        
+            // Подсветка активной страницы в навигации
+            const currentPage = location.pathname.split('/').pop();
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                    link.style.fontWeight = 'bold';
+                }
+            });
+        
+            // Анимация карточек фильмов/сериалов
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                    this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+                });
+            });
+        
+            // Обработка кликов по карточкам
+            cards.forEach(card => {
+                card.addEventListener('click', function(e) {
+                    if (!e.target.classList.contains('btn')) {
+                        const link = this.querySelector('a.btn');
+                        if (link) window.location.href = link.href;
+                    }
+                });
+            });
+        });
+        // Список фильмов и сериалов
+        const movies = [
+            { title: "Интерстеллар", link: "film-interstellar.html" },
+            { title: "Начало", link: "film-inception.html" },
+            { title: "Форрест Гамп", link: "film-forrest-gump.html" },
+            { title: "Кобра Кай", link: "series-cobra-kai.html" },
+            { title: "Игра престолов", link: "series-got.html" },
+            { title: "Черное зеркало", link: "series-black-mirror.html" }
+        ];
+
+        // Поиск
+        const searchInput = document.getElementById("searchInput");
+        const searchResults = document.getElementById("searchResults");
+
+        searchInput.addEventListener("input", function () {
+            const query = this.value.toLowerCase();
+            searchResults.innerHTML = "";
+
+            if (query.length > 0) {
+                const results = movies.filter(movie => movie.title.toLowerCase().includes(query));
+
+                if (results.length > 0) {
+                    results.forEach(movie => {
+                        const resultItem = document.createElement("div");
+                        resultItem.textContent = movie.title;
+                        resultItem.classList.add("search-result-item");
+                        resultItem.addEventListener("click", () => {
+                            window.location.href = movie.link;
+                        });
+                        searchResults.appendChild(resultItem);
+                    });
+                    searchResults.style.display = "block"; // Показываем результаты
+                } else {
+                    const noResult = document.createElement("div");
+                    noResult.textContent = "Ничего не найдено";
+                    noResult.classList.add("search-result-item");
+                    searchResults.appendChild(noResult);
+                    searchResults.style.display = "block"; // Показываем сообщение
+                }
+            } else {
+                searchResults.style.display = "none"; // Скрываем результаты, если поле пустое
+            }
+        });
+
+        // Скрыть результаты при клике вне поля поиска
+        document.addEventListener("click", function (event) {
+            if (event.target !== searchInput && event.target !== searchResults) {
+                searchResults.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>

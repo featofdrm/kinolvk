@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра престолов (Game of Thrones) - KinoLavka</title>
+    <meta name="description" content="Игра престолов — эпическая сага о борьбе за власть в Вестеросе. Фэнтези, драма, приключения.">
+    <meta name="keywords" content="Игра престолов, Game of Thrones, сериал, фэнтези, драма, приключения">
+    <meta name="theme-color" content="#0f0f1a">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <div class="loading"></div>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo"><h1>KinoLavka</h1></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="films.html"><i class="fas fa-film"></i> Фильмы</a></li>
+                    <li><a href="series.html" class="active"><i class="fas fa-tv"></i> Сериалы</a></li>
+                    <li><a href="gallery.html"><i class="fas fa-images"></i> Галерея</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                </ul>
+            </nav>
+            <div class="search">
+                <input type="text" id="searchInput" placeholder="Поиск фильмов и сериалов...">
+                <button id="searchButton"><i class="fas fa-search"></i></button>
+                <div class="search-results"></div>
+            </div>
+        </div>
+    </header>
+    <main class="series-page">
+        <section class="movie-hero">
+            <div class="hero-backdrop" style="background-image: url('images/got-bg.jpg');"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="movie-poster">
+                    <img src="images/got.jpg" alt="Игра престолов">
+                    <div class="movie-rating"><i class="fas fa-star"></i><span>9.3</span></div>
+                </div>
+                <div class="movie-info">
+                    <h1>Игра престолов</h1>
+                    <div class="movie-meta">
+                        <span><i class="fas fa-calendar"></i> 2011–2019</span>
+                        <span><i class="fas fa-tv"></i> США, Великобритания</span>
+                    </div>
+                    <div class="movie-genres">
+                        <span class="genre-tag">фэнтези</span>
+                        <span class="genre-tag">драма</span>
+                        <span class="genre-tag">приключения</span>
+                    </div>
+                    <p class="movie-description">
+                        В вымышленном мире Вестероса и Эссоса разворачивается борьба за Железный трон между благородными домами, в то время как древнее зло угрожает всему живому. Сериал основан на книгах Джорджа Р. Р. Мартина.
+                    </p>
+                    <div class="movie-actions">
+                        <button class="btn btn-primary"><i class="fas fa-play"></i> Смотреть</button>
+                        <button class="btn btn-secondary"><i class="fas fa-heart"></i> В избранное</button>
+                        <button class="btn btn-secondary"><i class="fas fa-share"></i> Поделиться</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="movie-details">
+            <div class="details-container">
+                <div class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-users"></i> В ролях</h2>
+                    </div>
+                    <div class="cast-grid">
+                        <div class="cast-member"><img src="images/cast/emilia-clarke.jpg" alt="Эмилия Кларк"><h3>Эмилия Кларк</h3><p>Дейенерис Таргариен</p></div>
+                        <div class="cast-member"><img src="images/cast/kit-harington.jpg" alt="Кит Харингтон"><h3>Кит Харингтон</h3><p>Джон Сноу</p></div>
+                        <div class="cast-member"><img src="images/cast/peter-dinklage.jpg" alt="Питер Динклэйдж"><h3>Питер Динклэйдж</h3><p>Тирион Ланнистер</p></div>
+                        <div class="cast-member"><img src="images/cast/lena-headey.jpg" alt="Лина Хиди"><h3>Лина Хиди</h3><p>Серсея Ланнистер</p></div>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-comments"></i> Отзывы</h2>
+                    </div>
+                    <div class="reviews-list">
+                        <div class="review-item">
+                            <div class="review-header">
+                                <img src="images/avatars/user11.jpg" alt="Аватар пользователя">
+                                <div class="review-info">
+                                    <h3>Александр П.</h3>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="review-date">25.04.2024</span>
+                                </div>
+                            </div>
+                            <p class="review-text">Великолепная атмосфера, интриги и неожиданные повороты. Один из лучших сериалов!</p>
+                        </div>
+                        <div class="review-item">
+                            <div class="review-header">
+                                <img src="images/avatars/user12.jpg" alt="Аватар пользователя">
+                                <div class="review-info">
+                                    <h3>Марина С.</h3>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="review-date">22.04.2024</span>
+                                </div>
+                            </div>
+                            <p class="review-text">Сериал держит в напряжении до последней серии. Рекомендую всем любителям фэнтези!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-film"></i> Похожие сериалы</h2>
+                    </div>
+                    <div class="similar-movies-grid">
+                        <div class="movie-card"><img src="images/series/the-witcher.jpg" alt="Ведьмак"><div class="movie-card-content"><h3>Ведьмак</h3><div class="movie-card-rating"><i class="fas fa-star"></i><span>8.2</span></div></div></div>
+                        <div class="movie-card"><img src="images/series/vikings.jpg" alt="Викинги"><div class="movie-card-content"><h3>Викинги</h3><div class="movie-card-rating"><i class="fas fa-star"></i><span>8.5</span></div></div></div>
+                        <div class="movie-card"><img src="images/series/house-dragon.jpg" alt="Дом дракона"><div class="movie-card-content"><h3>Дом дракона</h3><div class="movie-card-rating"><i class="fas fa-star"></i><span>8.7</span></div></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 KinoLavka. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>

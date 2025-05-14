@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KinoLavka - Фотогалерея. Эксклюзивные фотографии со съемок фильмов и сериалов.">
+    <meta name="keywords" content="фотогалерея, кадры из фильмов, фото со съемок, кино фото">
+    <meta name="theme-color" content="#0f0f1a">
+    <title>KinoLavka - Фотогалерея</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta http-equiv="Content-Security-Policy" 
+          content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.youtube.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' data: https:; font-src 'self' https://cdnjs.cloudflare.com;">
+</head>
+<body>
+    <div class="loading"></div>
+    
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+        <h1>KinoLavka</h1>
+            </a>
+        <nav>
+            <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="films.html"><i class="fas fa-film"></i> Фильмы</a></li>
+                    <li><a href="series.html"><i class="fas fa-tv"></i> Сериалы</a></li>
+                    <li><a href="gallery.html" class="active" aria-current="page"><i class="fas fa-images"></i> Фотогалерея</a></li>
+                    <li><a href="registration.html"><i class="fas fa-user-plus"></i> Регистрация</a></li>
+                    <li><a href="lists-tables.html"><i class="fas fa-list"></i> Списки и таблицы</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+            </ul>
+        </nav>
+<div class="search">
+                <input type="text" id="searchInput" placeholder="Поиск фотографий..." aria-label="Поиск">
+                <button id="searchButton" aria-label="Начать поиск"><i class="fas fa-search"></i></button>
+                <div id="searchResults" class="search-results" role="listbox"></div>
+            </div>
+</div>
+    </header>
+
+    <main class="gallery-page">
+        <section class="page-header">
+            <div class="header-content">
+                <h1>Фотогалерея</h1>
+                <p>Эксклюзивные фотографии со съемок ваших любимых фильмов и сериалов</p>
+            </div>
+        </section>
+
+        <section class="filters-section">
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label for="category">Категория</label>
+                    <select id="category" class="filter-select">
+                        <option value="">Все категории</option>
+                        <option value="behind-scenes">За кадром</option>
+                        <option value="posters">Постеры</option>
+                        <option value="promo">Промо-фото</option>
+                        <option value="events">Мероприятия</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="content">Контент</label>
+                    <select id="content" class="filter-select">
+                        <option value="">Весь контент</option>
+                        <option value="films">Фильмы</option>
+                        <option value="series">Сериалы</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="year">Год</label>
+                    <select id="year" class="filter-select">
+                        <option value="">Все годы</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sort">Сортировка</label>
+                    <select id="sort" class="filter-select">
+                        <option value="newest">Сначала новые</option>
+                        <option value="oldest">Сначала старые</option>
+                        <option value="popular">По популярности</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-grid" id="galleryGrid">
+            <!-- Галерея будет рендериться через JS -->
+        </section>
+
+        <div class="pagination">
+            <button class="pagination-btn" disabled><i class="fas fa-chevron-left"></i></button>
+            <button class="pagination-btn active">1</button>
+            <button class="pagination-btn">2</button>
+            <button class="pagination-btn">3</button>
+            <span class="pagination-dots">...</span>
+            <button class="pagination-btn">10</button>
+            <button class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox">
+            <button class="lightbox-close" aria-label="Закрыть">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="lightbox-prev" aria-label="Предыдущее изображение">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-next" aria-label="Следующее изображение">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="lightbox-content">
+                <img src="" alt="" id="lightbox-image">
+                <div class="lightbox-caption">
+                    <h3></h3>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>О нас</h3>
+                    <p>KinoLavka - ваш надежный источник качественного контента. Мы предлагаем широкий выбор фильмов и сериалов для каждого зрителя.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="about.html">О проекте</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                        <li><a href="privacy.html">Политика конфиденциальности</a></li>
+                        <li><a href="terms.html">Условия использования</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Подпишитесь на новости</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Ваш email" required>
+                        <button type="submit" class="btn">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+        <p>&copy; 2025 KinoLavka. Все права защищены.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Удаление анимации загрузки после загрузки страницы
+        window.addEventListener('load', () => {
+            const loading = document.querySelector('.loading');
+            loading.style.opacity = '0';
+            setTimeout(() => {
+                loading.style.display = 'none';
+            }, 500);
+        });
+
+        // Кнопка прокрутки наверх
+        const scrollTop = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+        });
+
+        scrollTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // --- ДАННЫЕ ГАЛЕРЕИ ---
+        const galleryItems = [
+            {
+                title: 'За кадром: Интерстеллар',
+                description: 'Съемки культовой сцены в космосе',
+                category: 'behind-scenes',
+                content: 'films',
+                year: 2024,
+                img: 'images/interstellar-behind.jpg',
+                tag: 'За кадром'
+            },
+            {
+                title: 'Игра престолов',
+                description: 'Официальные промо-материалы',
+                category: 'promo',
+                content: 'series',
+                year: 2023,
+                img: 'images/got-promo.jpg',
+                tag: 'Промо-фото'
+            },
+            {
+                title: 'Начало',
+                description: 'Оригинальный постер фильма',
+                category: 'posters',
+                content: 'films',
+                year: 2022,
+                img: 'images/inception-poster.jpg',
+                tag: 'Постеры'
+            },
+            {
+                title: 'Во все тяжкие',
+                description: 'Съемки финального сезона',
+                category: 'behind-scenes',
+                content: 'series',
+                year: 2021,
+                img: 'images/breaking-bad-behind.jpg',
+                tag: 'За кадром'
+            },
+            {
+                title: 'Очень странные дела',
+                description: 'Премьера нового сезона',
+                category: 'events',
+                content: 'series',
+                year: 2024,
+                img: 'images/stranger-things-event.jpg',
+                tag: 'Мероприятия'
+            },
+            {
+                title: 'Форрест Гамп',
+                description: 'Классический постер фильма',
+                category: 'posters',
+                content: 'films',
+                year: 2020,
+                img: 'images/forrest-gump.jpg',
+                tag: 'Постеры'
+            }
+            // Добавьте больше изображений по аналогии
+        ];
+
+        // --- РЕНДЕР ГАЛЕРЕИ ---
+        function renderGallery(items) {
+            const grid = document.getElementById('galleryGrid');
+            if (!items.length) {
+                grid.innerHTML = '<div class="no-results">Ничего не найдено по выбранным фильтрам.</div>';
+                return;
+            }
+            grid.innerHTML = items.map(item => `
+                <div class="gallery-item">
+                    <img src="${item.img}" alt="${item.title}" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>${item.title}</h3>
+                            <p>${item.description}</p>
+                            <span class="gallery-category">${item.tag}</span>
+                        </div>
+                        <button class="gallery-zoom" aria-label="Увеличить изображение">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // --- ФИЛЬТРАЦИЯ И СОРТИРОВКА ---
+        function filterAndSortGallery() {
+            let filtered = [...galleryItems];
+            const category = document.getElementById('category').value;
+            const content = document.getElementById('content').value;
+            const year = document.getElementById('year').value;
+            const sort = document.getElementById('sort').value;
+
+            if (category) filtered = filtered.filter(i => i.category === category);
+            if (content) filtered = filtered.filter(i => i.content === content);
+            if (year) filtered = filtered.filter(i => String(i.year) === year);
+
+            if (sort === 'newest') filtered.sort((a, b) => b.year - a.year);
+            else if (sort === 'oldest') filtered.sort((a, b) => a.year - b.year);
+            else if (sort === 'popular') filtered.sort((a, b) => a.title.localeCompare(b.title, 'ru'));
+
+            renderGallery(filtered);
+        }
+
+        document.querySelectorAll('.filter-select').forEach(filter => {
+            filter.addEventListener('change', filterAndSortGallery);
+        });
+
+        // Первичный рендер
+        renderGallery(galleryItems);
+
+        // --- Lightbox и остальной функционал (оставляю как есть) ---
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const lightboxCaption = lightbox.querySelector('.lightbox-caption');
+        const galleryElements = document.querySelectorAll('.gallery-item');
+        let currentImageIndex = 0;
+
+        galleryElements.forEach((item, index) => {
+            const zoomButton = item.querySelector('.gallery-zoom');
+            zoomButton.addEventListener('click', () => {
+                currentImageIndex = index;
+                openLightbox(item);
+            });
+        });
+
+        function openLightbox(item) {
+            const img = item.querySelector('img');
+            const title = item.querySelector('h3').textContent;
+            const description = item.querySelector('p').textContent;
+
+            lightboxImage.src = img.src;
+            lightboxImage.alt = img.alt;
+            lightboxCaption.querySelector('h3').textContent = title;
+            lightboxCaption.querySelector('p').textContent = description;
+
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function showNextImage() {
+            currentImageIndex = (currentImageIndex + 1) % galleryElements.length;
+            openLightbox(galleryElements[currentImageIndex]);
+        }
+
+        function showPrevImage() {
+            currentImageIndex = (currentImageIndex - 1 + galleryElements.length) % galleryElements.length;
+            openLightbox(galleryElements[currentImageIndex]);
+        }
+
+        // Обработчики событий для lightbox
+        lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+        lightbox.querySelector('.lightbox-next').addEventListener('click', showNextImage);
+        lightbox.querySelector('.lightbox-prev').addEventListener('click', showPrevImage);
+
+        // Закрытие по клику вне изображения
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Закрытие по клавише Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
+            } else if (e.key === 'ArrowRight' && lightbox.classList.contains('active')) {
+                showNextImage();
+            } else if (e.key === 'ArrowLeft' && lightbox.classList.contains('active')) {
+                showPrevImage();
+            }
+        });
+
+        // --- Тема сайта ---
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('i');
+        function setTheme(theme) {
+            if (theme === 'light') {
+                document.body.setAttribute('data-theme', 'light');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                document.body.removeAttribute('data-theme');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        }
+        // При загрузке страницы
+        const savedTheme = localStorage.getItem('theme');
+        setTheme(savedTheme);
+        // Переключение темы
+        themeToggle.addEventListener('click', () => {
+            const isLight = document.body.getAttribute('data-theme') === 'light';
+            if (isLight) {
+                setTheme(null);
+                localStorage.removeItem('theme');
+            } else {
+                setTheme('light');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+</script>
+</body>
+</html>
