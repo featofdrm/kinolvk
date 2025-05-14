@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KinoLavka - Лучшие сериалы всех времен. Смотрите новинки, популярные сериалы и культовые шоу.">
+    <meta name="keywords" content="сериалы, тв шоу, онлайн сериалы, новинки сериалов">
+    <meta name="theme-color" content="#0f0f1a">
+    <title>KinoLavka - Сериалы</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta http-equiv="Content-Security-Policy" 
+          content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.youtube.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' data: https:; font-src 'self' https://cdnjs.cloudflare.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com;">
+</head>
+<body>
+    <div class="loading"></div>
+    
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+        <h1>KinoLavka</h1>
+            </a>
+        <nav>
+            <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="films.html"><i class="fas fa-film"></i> Фильмы</a></li>
+                    <li><a href="series.html" class="active" aria-current="page"><i class="fas fa-tv"></i> Сериалы</a></li>
+                    <li><a href="gallery.html"><i class="fas fa-images"></i> Фотогалерея</a></li>
+                    <li><a href="registration.html"><i class="fas fa-user-plus"></i> Регистрация</a></li>
+                    <li><a href="lists-tables.html"><i class="fas fa-list"></i> Списки и таблицы</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+            </ul>
+        </nav>
+<div class="search">
+                <input type="text" id="searchInput" placeholder="Поиск сериалов..." aria-label="Поиск">
+                <button id="searchButton" aria-label="Начать поиск"><i class="fas fa-search"></i></button>
+                <div id="searchResults" class="search-results" role="listbox"></div>
+            </div>
+</div>
+    </header>
+
+    <main class="series-page">
+        <section class="page-header">
+            <div class="header-content">
+                <h1>Сериалы</h1>
+                <p>Откройте для себя мир захватывающих сериалов</p>
+        </div>
+        </section>
+
+        <section class="filters-section">
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label for="genre">Жанр</label>
+                    <select id="genre" class="filter-select">
+                        <option value="">Все жанры</option>
+                        <option value="drama">Драмы</option>
+                        <option value="comedy">Комедии</option>
+                        <option value="thriller">Триллеры</option>
+                        <option value="fantasy">Фэнтези</option>
+                        <option value="sci-fi">Фантастика</option>
+                        <option value="horror">Ужасы</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="year">Год</label>
+                    <select id="year" class="filter-select">
+                        <option value="">Все годы</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="rating">Рейтинг</label>
+                    <select id="rating" class="filter-select">
+                        <option value="">Любой рейтинг</option>
+                        <option value="9">9+</option>
+                        <option value="8">8+</option>
+                        <option value="7">7+</option>
+                        <option value="6">6+</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sort">Сортировка</label>
+                    <select id="sort" class="filter-select">
+                        <option value="rating">По рейтингу</option>
+                        <option value="year">По году</option>
+                        <option value="name">По названию</option>
+                    </select>
+                </div>
+    </div>
+        </section>
+
+        <section class="series-grid" id="seriesGrid">
+            <!-- Карточки сериалов будут рендериться через JS -->
+        </section>
+
+        <!-- Модальное окно для трейлера -->
+        <div class="trailer-modal" id="trailerModal">
+            <div class="trailer-modal-content">
+                <button class="trailer-modal-close" id="trailerModalClose" aria-label="Закрыть трейлер"><i class="fas fa-times"></i></button>
+                <div class="trailer-video-wrapper">
+                    <iframe id="trailerIframe" width="900" height="506" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    </div>
+</div>
+
+        <div class="pagination">
+            <button class="pagination-btn" disabled><i class="fas fa-chevron-left"></i></button>
+            <button class="pagination-btn active">1</button>
+            <button class="pagination-btn">2</button>
+            <button class="pagination-btn">3</button>
+            <span class="pagination-dots">...</span>
+            <button class="pagination-btn">10</button>
+            <button class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>О нас</h3>
+                    <p>KinoLavka - ваш надежный источник качественного контента. Мы предлагаем широкий выбор фильмов и сериалов для каждого зрителя.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="about.html">О проекте</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                        <li><a href="privacy.html">Политика конфиденциальности</a></li>
+                        <li><a href="terms.html">Условия использования</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Подпишитесь на новости</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Ваш email" required>
+                        <button type="submit" class="btn">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+        <p>&copy; 2025 KinoLavka. Все права защищены.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Удаление анимации загрузки после загрузки страницы
+        window.addEventListener('load', () => {
+            const loading = document.querySelector('.loading');
+            loading.style.opacity = '0';
+            setTimeout(() => {
+                loading.style.display = 'none';
+            }, 500);
+        });
+
+        // Кнопка прокрутки наверх
+        const scrollTop = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+        });
+
+        scrollTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+    });
+});
+
+        // --- ДАННЫЕ СЕРИАЛОВ ---
+        const series = [
+            {
+                title: 'Игра престолов',
+                genres: ['Фэнтези', 'Драма'],
+                year: 2019,
+                rating: 9.3,
+                img: 'images/got.jpg',
+                link: 'series-got.html',
+                description: 'Эпическая сага о борьбе за власть в вымышленном мире Вестероса.',
+                trailer: 'https://www.youtube.com/embed/gcTkNV5Vg1E'
+            },
+            {
+                title: 'Кобра Кай',
+                genres: ['Драма', 'Спорт'],
+                year: 2024,
+                rating: 8.6,
+                img: 'images/cobra-kai.jpg',
+                link: 'series-cobra-kai.html',
+                description: 'Продолжение культовой франшизы "Парень-каратист" спустя 34 года.',
+                trailer: 'https://www.youtube.com/embed/xCwwxNbtK6Y'
+            },
+            {
+                title: 'Черное зеркало',
+                genres: ['Научная фантастика', 'Триллер'],
+                year: 2023,
+                rating: 8.8,
+                img: 'images/black-mirror.jpg',
+                link: 'series-black-mirror.html',
+                description: 'Антология, исследующая темную сторону технологий и их влияние на общество.',
+                trailer: 'https://www.youtube.com/embed/jDiYGjp5iFg'
+            },
+            {
+                title: 'Во все тяжкие',
+                genres: ['Криминал', 'Драма'],
+                year: 2013,
+                rating: 9.2,
+                img: 'images/breaking-bad.jpg',
+                link: 'series-breaking-bad.html',
+                description: 'История учителя химии, который становится наркобароном.',
+                trailer: 'https://www.youtube.com/embed/HhesaQXLuRY'
+            },
+            {
+                title: 'Очень странные дела',
+                genres: ['Фантастика', 'Ужасы'],
+                year: 2024,
+                rating: 9.0,
+                img: 'images/stranger-things.jpg',
+                link: 'series-stranger-things.html',
+                description: 'Загадочное исчезновение мальчика приводит к раскрытию сверхъестественных тайн.',
+                trailer: 'https://www.youtube.com/embed/b9EkMc79ZSU'
+            },
+            {
+                title: 'Корона',
+                genres: ['Драма', 'История'],
+                year: 2023,
+                rating: 8.9,
+                img: 'images/the-crown.jpg',
+                link: 'series-the-crown.html',
+                description: 'История правления королевы Елизаветы II и политических событий.',
+                trailer: 'https://www.youtube.com/embed/JWtnJjn6ng0'
+            }
+            // Добавьте больше сериалов по аналогии
+        ];
+
+        // --- РЕНДЕР КАРТОЧЕК ---
+        function renderSeries(seriesToRender) {
+            const grid = document.getElementById('seriesGrid');
+            if (!seriesToRender.length) {
+                grid.innerHTML = '<div class="no-results">Ничего не найдено по выбранным фильтрам.</div>';
+                return;
+            }
+            grid.innerHTML = seriesToRender.map(ser => `
+                <div class="card">
+                    <div class="card-rating">
+                        <i class="fas fa-star"></i>
+                        <span>${ser.rating}</span>
+                    </div>
+                    <img src="${ser.img}" alt="${ser.title}" loading="lazy">
+                    <div class="card-content">
+                        <h3>${ser.title}</h3>
+                        <div class="card-genre">${ser.genres.join(', ')}</div>
+                        <p>${ser.description}</p>
+                        <div class="card-footer" style="display: flex; flex-direction: column; align-items: center; gap: 0.3rem;">
+                            <span class="card-year">${ser.year}</span>
+                            <div style="width: 100%; display: flex; justify-content: center;">
+                                <a href="${ser.link}" class="btn">Подробнее <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            ${ser.trailer ? `<div style="width: 100%; display: flex; justify-content: center; margin-top: 0.5rem;"><button class="btn btn-secondary trailer-btn" data-trailer="${ser.trailer}"><i class="fas fa-play"></i> Смотреть трейлер</button></div>` : ''}
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // --- ФИЛЬТРАЦИЯ И СОРТИРОВКА ---
+        function filterAndSortSeries() {
+            let filtered = [...series];
+            const genre = document.getElementById('genre').value;
+            const year = document.getElementById('year').value;
+            const rating = document.getElementById('rating').value;
+            const sort = document.getElementById('sort').value;
+
+            // Соответствие value селекта и жанра в массиве
+            const genreMap = {
+                'drama': 'Драма',
+                'comedy': 'Комедии',
+                'thriller': 'Триллеры',
+                'fantasy': 'Фэнтези',
+                'sci-fi': 'Фантастика',
+                'horror': 'Ужасы'
+            };
+
+            if (genre) filtered = filtered.filter(s => s.genres.includes(genreMap[genre]));
+            if (year) filtered = filtered.filter(s => String(s.year) === year);
+            if (rating) filtered = filtered.filter(s => s.rating >= Number(rating));
+
+            if (sort === 'rating') filtered.sort((a, b) => b.rating - a.rating);
+            else if (sort === 'year') filtered.sort((a, b) => b.year - a.year);
+            else if (sort === 'name') filtered.sort((a, b) => a.title.localeCompare(b.title, 'ru'));
+
+            renderSeries(filtered);
+        }
+
+        document.querySelectorAll('.filter-select').forEach(filter => {
+            filter.addEventListener('change', filterAndSortSeries);
+        });
+
+        // Первичный рендер
+        renderSeries(series);
+        
+        // Обработка пагинации (оставляю как есть)
+        const paginationButtons = document.querySelectorAll('.pagination-btn');
+        paginationButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                if (!button.disabled) {
+                    paginationButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                }
+            });
+        });
+
+        // --- Тема сайта ---
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('i');
+        function setTheme(theme) {
+            if (theme === 'light') {
+                document.body.setAttribute('data-theme', 'light');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+        } else {
+                document.body.removeAttribute('data-theme');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        }
+        // При загрузке страницы
+        const savedTheme = localStorage.getItem('theme');
+        setTheme(savedTheme);
+        // Переключение темы
+        themeToggle.addEventListener('click', () => {
+            const isLight = document.body.getAttribute('data-theme') === 'light';
+            if (isLight) {
+                setTheme(null);
+                localStorage.removeItem('theme');
+    } else {
+                setTheme('light');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // --- МОДАЛЬНОЕ ОКНО ДЛЯ ТРЕЙЛЕРА ---
+        const trailerModal = document.getElementById('trailerModal');
+        const trailerModalClose = document.getElementById('trailerModalClose');
+        const trailerIframe = document.getElementById('trailerIframe');
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('trailer-btn')) {
+                const url = e.target.getAttribute('data-trailer');
+                if (url) {
+                    trailerIframe.src = url + '?autoplay=1';
+                    trailerModal.classList.add('active');
+                }
+            }
+            if (e.target === trailerModal) {
+                closeTrailerModal();
+            }
+        });
+        trailerModalClose.addEventListener('click', closeTrailerModal);
+        function closeTrailerModal() {
+            trailerModal.classList.remove('active');
+            trailerIframe.src = '';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Черное зеркало (Black Mirror) - KinoLavka</title>
+    <meta name="description" content="Черное зеркало — культовая антология о влиянии технологий на общество и человека. Фантастика, триллер, драма.">
+    <meta name="keywords" content="Черное зеркало, Black Mirror, сериал, фантастика, триллер, драма">
+    <meta name="theme-color" content="#0f0f1a">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <div class="loading"></div>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo"><h1>KinoLavka</h1></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="films.html"><i class="fas fa-film"></i> Фильмы</a></li>
+                    <li><a href="series.html" class="active"><i class="fas fa-tv"></i> Сериалы</a></li>
+                    <li><a href="gallery.html"><i class="fas fa-images"></i> Галерея</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                </ul>
+            </nav>
+            <div class="search">
+                <input type="text" id="searchInput" placeholder="Поиск фильмов и сериалов...">
+                <button id="searchButton"><i class="fas fa-search"></i></button>
+                <div class="search-results"></div>
+            </div>
+        </div>
+    </header>
+    <main class="series-page">
+        <section class="movie-hero">
+            <div class="hero-backdrop" style="background-image: url('images/black-mirror-bg.jpg');"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="movie-poster">
+                    <img src="images/black-mirror.jpg" alt="Черное зеркало">
+                    <div class="movie-rating"><i class="fas fa-star"></i><span>8.8</span></div>
+                </div>
+                <div class="movie-info">
+                    <h1>Черное зеркало</h1>
+                    <div class="movie-meta">
+                        <span><i class="fas fa-calendar"></i> 2011–н.в.</span>
+                        <span><i class="fas fa-tv"></i> Великобритания</span>
+                    </div>
+                    <div class="movie-genres">
+                        <span class="genre-tag">фантастика</span>
+                        <span class="genre-tag">триллер</span>
+                        <span class="genre-tag">драма</span>
+                    </div>
+                    <p class="movie-description">
+                        Антология о темной стороне технологий и их влиянии на общество. Каждый эпизод — отдельная история, заставляющая задуматься о будущем человечества.
+                    </p>
+                    <div class="movie-actions">
+                        <button class="btn btn-primary"><i class="fas fa-play"></i> Смотреть</button>
+                        <button class="btn btn-secondary"><i class="fas fa-heart"></i> В избранное</button>
+                        <button class="btn btn-secondary"><i class="fas fa-share"></i> Поделиться</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="movie-details">
+            <div class="details-container">
+                <div class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-users"></i> В ролях</h2>
+                    </div>
+                    <div class="cast-grid">
+                        <div class="cast-member"><img src="images/cast/jessie-buckley.jpg" alt="Джесси Бакли"><h3>Джесси Бакли</h3><p>Рэйчел</p></div>
+                        <div class="cast-member"><img src="images/cast/andrew-scott.jpg" alt="Эндрю Скотт"><h3>Эндрю Скотт</h3><p>Крис</p></div>
+                        <div class="cast-member"><img src="images/cast/letitia-wright.jpg" alt="Летиша Райт"><h3>Летиша Райт</h3><p>Ниш</p></div>
+                        <div class="cast-member"><img src="images/cast/daniel-kaluuya.jpg" alt="Дэниел Калуя"><h3>Дэниел Калуя</h3><p>Бинг</p></div>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-comments"></i> Отзывы</h2>
+                    </div>
+                    <div class="reviews-list">
+                        <div class="review-item">
+                            <div class="review-header">
+                                <img src="images/avatars/user5.jpg" alt="Аватар пользователя">
+                                <div class="review-info">
+                                    <h3>Виктория Л.</h3>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="review-date">18.04.2024</span>
+                                </div>
+                            </div>
+                            <p class="review-text">Каждая серия — отдельный шедевр. Заставляет задуматься о будущем технологий.</p>
+                        </div>
+                        <div class="review-item">
+                            <div class="review-header">
+                                <img src="images/avatars/user6.jpg" alt="Аватар пользователя">
+                                <div class="review-info">
+                                    <h3>Артём С.</h3>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="review-date">15.04.2024</span>
+                                </div>
+                            </div>
+                            <p class="review-text">Очень необычный и глубокий сериал. Рекомендую всем любителям фантастики!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-film"></i> Похожие сериалы</h2>
+                    </div>
+                    <div class="similar-movies-grid">
+                        <div class="movie-card"><img src="images/series/electric-dreams.jpg" alt="Электрические сны Филипа К. Дика"><div class="movie-card-content"><h3>Электрические сны Филипа К. Дика</h3><div class="movie-card-rating"><i class="fas fa-star"></i><span>7.2</span></div></div></div>
+                        <div class="movie-card"><img src="images/series/inside-no-9.jpg" alt="Внутри №9"><div class="movie-card-content"><h3>Внутри №9</h3><div class="movie-card-rating"><i class="fas fa-star"></i><span>8.5</span></div></div></div>
+                        <div class="movie-card"><img src="images/series/love-death-robots.jpg" alt="Любовь, смерть и роботы"><div class="movie-card-content"><h3>Любовь, смерть и роботы</h3><div class="movie-card-rating"><i class="fas fa-star"></i><span>8.4</span></div></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 KinoLavka. Все права защищены.</p>
+        </div>
+    </footer>
+    <script>
+       // Обработка комментариев
+const commentForm = document.querySelector('.add-comment');
+if (commentForm) {
+    commentForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const text = this.querySelector('textarea').value.trim();
+        if (text) {
+            const commentsSection = document.querySelector('.comments');
+            const newComment = document.createElement('div');
+            newComment.className = 'comment';
+            newComment.innerHTML = `<p><strong>Новый пользователь:</strong> ${text}</p>`;
+            commentsSection.insertBefore(newComment, commentForm);
+            this.querySelector('textarea').value = '';
+            
+            // Анимация нового комментария
+            newComment.style.opacity = '0';
+            setTimeout(() => {
+                newComment.style.transition = 'opacity 0.5s ease';
+                newComment.style.opacity = '1';
+            }, 10);
+        }
+    });
+}
+
+// Обработка видео
+const videoIframe = document.querySelector('.video-container iframe');
+if (videoIframe) {
+    videoIframe.addEventListener('mouseenter', function() {
+        this.style.transform = 'scale(1.02)';
+    });
+    videoIframe.addEventListener('mouseleave', function() {
+        this.style.transform = 'scale(1)';
+    });
+}
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Общие обработчики для всех страниц
+            
+            // Анимация при наведении на навигационные ссылки
+            const navLinks = document.querySelectorAll('nav ul li a');
+            navLinks.forEach(link => {
+                link.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.1)';
+                });
+                link.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        
+            // Обработка поиска
+            const searchForm = document.querySelector('.search');
+            if (searchForm) {
+                searchForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const query = this.querySelector('input').value.trim();
+                    if (query) {
+                        alert(`Вы искали: ${query}\nПоиск будет реализован в будущем!`);
+                        this.querySelector('input').value = '';
+                    }
+                });
+            }
+        
+            // Подсветка активной страницы в навигации
+            const currentPage = location.pathname.split('/').pop();
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                    link.style.fontWeight = 'bold';
+                }
+            });
+        
+            // Анимация карточек фильмов/сериалов
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                    this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+                });
+            });
+        
+            // Обработка кликов по карточкам
+            cards.forEach(card => {
+                card.addEventListener('click', function(e) {
+                    if (!e.target.classList.contains('btn')) {
+                        const link = this.querySelector('a.btn');
+                        if (link) window.location.href = link.href;
+                    }
+                });
+            });
+        });
+// Список фильмов и сериалов
+const movies = [
+    { title: "Интерстеллар", link: "film-interstellar.html" },
+    { title: "Начало", link: "film-inception.html" },
+    { title: "Форрест Гамп", link: "film-forrest-gump.html" },
+    { title: "Кобра Кай", link: "series-cobra-kai.html" },
+    { title: "Игра престолов", link: "series-got.html" },
+    { title: "Черное зеркало", link: "series-black-mirror.html" }
+];
+
+// Поиск
+const searchInput = document.getElementById("searchInput");
+const searchResults = document.getElementById("searchResults");
+
+searchInput.addEventListener("input", function () {
+    const query = this.value.toLowerCase();
+    searchResults.innerHTML = "";
+
+    if (query.length > 0) {
+        const results = movies.filter(movie => movie.title.toLowerCase().includes(query));
+
+        if (results.length > 0) {
+            results.forEach(movie => {
+                const resultItem = document.createElement("div");
+                resultItem.textContent = movie.title;
+                resultItem.classList.add("search-result-item");
+                resultItem.addEventListener("click", () => {
+                    window.location.href = movie.link;
+                });
+                searchResults.appendChild(resultItem);
+            });
+            searchResults.style.display = "block"; // Показываем результаты
+        } else {
+            const noResult = document.createElement("div");
+            noResult.textContent = "Ничего не найдено";
+            noResult.classList.add("search-result-item");
+            searchResults.appendChild(noResult);
+            searchResults.style.display = "block"; // Показываем сообщение
+        }
+    } else {
+        searchResults.style.display = "none"; // Скрываем результаты, если поле пустое
+    }
+});
+
+// Скрыть результаты при клике вне поля поиска
+document.addEventListener("click", function (event) {
+    if (event.target !== searchInput && event.target !== searchResults) {
+        searchResults.style.display = "none";
+    }
+});
+
+window.addEventListener('load', () => {
+    const loading = document.querySelector('.loading');
+    if (loading) {
+        loading.style.opacity = '0';
+        setTimeout(() => {
+            loading.style.display = 'none';
+        }, 500);
+    }
+});
+
+    </script>
+</body>
+</html>

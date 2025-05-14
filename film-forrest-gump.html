@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форрест Гамп (1994) - KinoLavka</title>
+    <meta name="description" content="Форрест Гамп - трогательная история о простом человеке, который стал свидетелем важнейших событий американской истории второй половины XX века.">
+    <meta name="keywords" content="Форрест Гамп, Forrest Gump, Том Хэнкс, Роберт Земекис, драма, комедия">
+    <meta name="theme-color" content="#0f0f1a">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <div class="loading"></div>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <h1>KinoLavka</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="films.html"><i class="fas fa-film"></i> Фильмы</a></li>
+                    <li><a href="series.html"><i class="fas fa-tv"></i> Сериалы</a></li>
+                    <li><a href="gallery.html"><i class="fas fa-images"></i> Галерея</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                </ul>
+            </nav>
+            <div class="search">
+                <input type="text" id="searchInput" placeholder="Поиск фильмов и сериалов...">
+                <button id="searchButton"><i class="fas fa-search"></i></button>
+                <div class="search-results"></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="movie-page">
+        <section class="movie-hero">
+            <div class="hero-backdrop" style="background-image: url('images/forrest-gump-bg.jpg');"></div>
+            <div class="hero-content">
+                <div class="movie-poster">
+                    <img src="images/forrest-gump.jpg" alt="Форрест Гамп">
+                    <div class="movie-rating">
+                        <i class="fas fa-star"></i>
+                        <span>9.0</span>
+                    </div>
+                </div>
+                <div class="movie-info">
+                    <h1>Форрест Гамп</h1>
+                    <div class="movie-meta">
+                        <span><i class="fas fa-calendar"></i> 1994</span>
+                        <span><i class="fas fa-clock"></i> 142 мин</span>
+                        <span><i class="fas fa-film"></i> США</span>
+                    </div>
+                    <div class="movie-genres">
+                        <span class="genre-tag">драма</span>
+                        <span class="genre-tag">комедия</span>
+                        <span class="genre-tag">история</span>
+                    </div>
+                    <p class="movie-description">
+                        От лица главного героя Форреста Гампа — не очень умного, но доброго и открытого парня — 
+                        рассказывается история его необыкновенной жизни. Несмотря на то, что Форрест не обладает 
+                        высоким интеллектом, он добивается больших успехов в жизни, становится звездой футбола, 
+                        героем войны и успешным бизнесменом. Всё это происходит на фоне важнейших событий 
+                        американской истории второй половины XX века.
+                    </p>
+                    <div class="movie-actions">
+                        <button class="btn btn-primary"><i class="fas fa-play"></i> Смотреть</button>
+                        <button class="btn btn-secondary"><i class="fas fa-heart"></i> В избранное</button>
+                        <button class="btn btn-secondary"><i class="fas fa-share"></i> Поделиться</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="movie-details">
+            <div class="details-container">
+                <div class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-users"></i> В ролях</h2>
+                    </div>
+                    <div class="cast-grid">
+                        <div class="cast-member">
+                            <img src="images/cast/hanks.jpg" alt="Том Хэнкс">
+                            <h3>Том Хэнкс</h3>
+                            <p>Форрест Гамп</p>
+                        </div>
+                        <div class="cast-member">
+                            <img src="images/cast/wright.jpg" alt="Робин Райт">
+                            <h3>Робин Райт</h3>
+                            <p>Дженни Каррен</p>
+                        </div>
+                        <div class="cast-member">
+                            <img src="images/cast/sinise.jpg" alt="Гэри Синиз">
+                            <h3>Гэри Синиз</h3>
+                            <p>Лейтенант Дэн Тейлор</p>
+                        </div>
+                        <div class="cast-member">
+                            <img src="images/cast/williamson.jpg" alt="Майкл Коннер Хэмпфри">
+                            <h3>Майкл Коннер Хэмпфри</h3>
+                            <p>Форрест Гамп (в детстве)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-comments"></i> Отзывы</h2>
+                    </div>
+                    <div class="reviews-list">
+                        <div class="review-item">
+                            <div class="review-header">
+                                <img src="images/avatars/user5.jpg" alt="Аватар пользователя">
+                                <div class="review-info">
+                                    <h3>Александр К.</h3>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="review-date">15.03.2024</span>
+                                </div>
+                            </div>
+                            <p class="review-text">
+                                Фильм, который заставляет задуматься о жизни. История Форреста Гампа показывает, 
+                                что даже простой человек может достичь многого, если остаётся верен себе и своим 
+                                принципам. Том Хэнкс сыграл просто блестяще!
+                            </p>
+                        </div>
+                        <div class="review-item">
+                            <div class="review-header">
+                                <img src="images/avatars/user6.jpg" alt="Аватар пользователя">
+                                <div class="review-info">
+                                    <h3>Мария С.</h3>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="review-date">10.03.2024</span>
+                                </div>
+                            </div>
+                            <p class="review-text">
+                                Один из самых трогательных фильмов, которые я когда-либо видела. История любви 
+                                Форреста и Дженни, их жизненные пути и то, как они переплетаются - всё это 
+                                показано с такой искренностью и теплотой. Фильм, который хочется пересматривать 
+                                снова и снова.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-film"></i> Похожие фильмы</h2>
+                    </div>
+                    <div class="similar-movies-grid">
+                        <div class="movie-card">
+                            <img src="images/movies/shawshank.jpg" alt="Побег из Шоушенка">
+                            <div class="movie-card-content">
+                                <h3>Побег из Шоушенка</h3>
+                                <div class="movie-card-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>9.3</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="images/movies/green-mile.jpg" alt="Зеленая миля">
+                            <div class="movie-card-content">
+                                <h3>Зеленая миля</h3>
+                                <div class="movie-card-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>9.1</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="images/movies/beautiful-mind.jpg" alt="Игры разума">
+                            <div class="movie-card-content">
+                                <h3>Игры разума</h3>
+                                <div class="movie-card-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>8.8</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>О KinoLavka</h3>
+                    <p>Ваш надежный источник информации о фильмах и сериалах. Мы помогаем вам находить 
+                    лучшее кино и делиться впечатлениями с другими зрителями.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="films.html">Фильмы</a></li>
+                        <li><a href="series.html">Сериалы</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Подпишитесь на новости</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Ваш email">
+                        <button type="submit" class="btn">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-vk"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 KinoLavka. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="theme-toggle" aria-label="Переключить тему">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <button class="scroll-top" aria-label="Наверх">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Loading animation
+        window.addEventListener('load', () => {
+            document.querySelector('.loading').style.display = 'none';
+        });
+
+        // Scroll to top button
+        const scrollTopBtn = document.querySelector('.scroll-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Theme toggle
+        const themeToggle = document.querySelector('.theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            const icon = themeToggle.querySelector('i');
+            icon.classList.toggle('fa-moon');
+            icon.classList.toggle('fa-sun');
+        });
+
+        // Button actions
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (this.classList.contains('btn-primary')) {
+                    alert('Начинаем воспроизведение фильма...');
+                } else if (this.classList.contains('btn-secondary')) {
+                    if (this.querySelector('.fa-heart')) {
+                        this.classList.toggle('active');
+                        const icon = this.querySelector('i');
+                        icon.classList.toggle('fas');
+                        icon.classList.toggle('far');
+                    } else if (this.querySelector('.fa-share')) {
+                        alert('Поделиться фильмом');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

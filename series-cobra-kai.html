@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кобра Кай (Cobra Kai) - KinoLavka</title>
+    <meta name="description" content="Кобра Кай — продолжение легендарной истории о карате, где соперничество переходит к новому поколению.">
+    <meta name="keywords" content="Кобра Кай, Cobra Kai, сериал, карате, боевик, драма">
+    <meta name="theme-color" content="#0f0f1a">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <div class="loading"></div>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo"><h1>KinoLavka</h1></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="films.html"><i class="fas fa-film"></i> Фильмы</a></li>
+                    <li><a href="series.html" class="active"><i class="fas fa-tv"></i> Сериалы</a></li>
+                    <li><a href="gallery.html"><i class="fas fa-images"></i> Галерея</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                </ul>
+            </nav>
+            <div class="search">
+                <input type="text" id="searchInput" placeholder="Поиск фильмов и сериалов...">
+                <button id="searchButton"><i class="fas fa-search"></i></button>
+                <div class="search-results"></div>
+            </div>
+        </div>
+    </header>
+    <main class="series-page">
+        <section class="movie-hero">
+            <div class="hero-backdrop" style="background-image: url('images/cobra-kai-bg.jpg');"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="movie-poster">
+                    <img src="images/cobra-kai.jpg" alt="Кобра Кай">
+                    <div class="movie-rating"><i class="fas fa-star"></i><span>8.6</span></div>
+                </div>
+                <div class="movie-info">
+                    <h1>Кобра Кай</h1>
+                    <div class="movie-meta">
+                        <span><i class="fas fa-calendar"></i> 2018–н.в.</span>
+                        <span><i class="fas fa-tv"></i> США</span>
+                    </div>
+                    <div class="movie-genres">
+                        <span class="genre-tag">боевик</span>
+                        <span class="genre-tag">драма</span>
+                        <span class="genre-tag">спорт</span>
+                    </div>
+                    <p class="movie-description">
+                        Продолжение легендарной истории о карате. Джонни Лоуренс решает возродить додзё "Кобра Кай", что приводит к новому витку соперничества с Дэниелом ЛаРуссо и вовлекает новое поколение подростков в мир боевых искусств и личных драм.
+                    </p>
+                    <div class="movie-actions">
+                        <button class="btn btn-primary"><i class="fas fa-play"></i> Смотреть</button>
+                        <button class="btn btn-secondary"><i class="fas fa-heart"></i> В избранное</button>
+                        <button class="btn btn-secondary"><i class="fas fa-share"></i> Поделиться</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="movie-details">
+            <div class="details-container">
+                <div class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-users"></i> В ролях</h2>
+                    </div>
+                    <div class="cast-grid">
+                        <div class="cast-member"><img src="images/cast/william-zabka.jpg" alt="Уильям Забка"><h3>Уильям Забка</h3><p>Джонни Лоуренс</p></div>
+                        <div class="cast-member"><img src="images/cast/ralph-macchio.jpg" alt="Ральф Маччио"><h3>Ральф Маччио</h3><p>Дэниел ЛаРуссо</p></div>
+                        <div class="cast-member"><img src="images/cast/xolo-mariduena.jpg" alt="Шоло Маридуэня"><h3>Шоло Маридуэня</h3><p>Мигель Диас</p></div>
+                        <div class="cast-member"><img src="images/cast/mary-mouser.jpg" alt="Мэри Маузер"><h3>Мэри Маузер</h3><p>Саманта ЛаРуссо</p></div>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-comments"></i> Отзывы</h2>
+                    </div>
+                    <div class="reviews-list">
+                        <div class="review-item">
+                            <div class="review-header">
+                                <img src="images/avatars/user1.jpg" alt="Аватар пользователя">
+                                <div class="review-info">
+                                    <h3>Иван К.</h3>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="review-date">10.04.2024</span>
+                                </div>
+                            </div>
+                            <p class="review-text">Сериал отлично продолжает дух оригинального фильма, много ностальгии и новых интересных персонажей.</p>
+                        </div>
+                        <div class="review-item">
+                            <div class="review-header">
+                                <img src="images/avatars/user2.jpg" alt="Аватар пользователя">
+                                <div class="review-info">
+                                    <h3>Мария С.</h3>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="review-date">05.04.2024</span>
+                                </div>
+                            </div>
+                            <p class="review-text">Очень динамично, интересно наблюдать за развитием героев. Рекомендую всем фанатам карате!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-film"></i> Похожие сериалы</h2>
+                    </div>
+                    <div class="similar-movies-grid">
+                        <div class="movie-card"><img src="images/series/karate-kid.jpg" alt="Каратэ-пацан"><div class="movie-card-content"><h3>Каратэ-пацан</h3><div class="movie-card-rating"><i class="fas fa-star"></i><span>7.2</span></div></div></div>
+                        <div class="movie-card"><img src="images/series/outer-banks.jpg" alt="Внешние отмели"><div class="movie-card-content"><h3>Внешние отмели</h3><div class="movie-card-rating"><i class="fas fa-star"></i><span>7.5</span></div></div></div>
+                        <div class="movie-card"><img src="images/series/all-american.jpg" alt="Все американцы"><div class="movie-card-content"><h3>Все американцы</h3><div class="movie-card-rating"><i class="fas fa-star"></i><span>7.6</span></div></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 KinoLavka. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+// Список фильмов и сериалов
+const movies = [
+    { title: "Интерстеллар", link: "film-interstellar.html" },
+    { title: "Начало", link: "film-inception.html" },
+    { title: "Форрест Гамп", link: "film-forrest-gump.html" },
+    { title: "Кобра Кай", link: "series-cobra-kai.html" },
+    { title: "Игра престолов", link: "series-got.html" },
+    { title: "Черное зеркало", link: "series-black-mirror.html" }
+];
+
+// Поиск
+const searchInput = document.getElementById("searchInput");
+const searchResults = document.getElementById("searchResults");
+
+searchInput.addEventListener("input", function () {
+    const query = this.value.toLowerCase();
+    searchResults.innerHTML = "";
+
+    if (query.length > 0) {
+        const results = movies.filter(movie => movie.title.toLowerCase().includes(query));
+
+        if (results.length > 0) {
+            results.forEach(movie => {
+                const resultItem = document.createElement("div");
+                resultItem.textContent = movie.title;
+                resultItem.classList.add("search-result-item");
+                resultItem.addEventListener("click", () => {
+                    window.location.href = movie.link;
+                });
+                searchResults.appendChild(resultItem);
+            });
+            searchResults.style.display = "block"; // Показываем результаты
+        } else {
+            const noResult = document.createElement("div");
+            noResult.textContent = "Ничего не найдено";
+            noResult.classList.add("search-result-item");
+            searchResults.appendChild(noResult);
+            searchResults.style.display = "block"; // Показываем сообщение
+        }
+    } else {
+        searchResults.style.display = "none"; // Скрываем результаты, если поле пустое
+    }
+});
+
+// Скрыть результаты при клике вне поля поиска
+document.addEventListener("click", function (event) {
+    if (event.target !== searchInput && event.target !== searchResults) {
+        searchResults.style.display = "none";
+    }
+});
+
+window.addEventListener('load', () => {
+    const loading = document.querySelector('.loading');
+    if (loading) {
+        loading.style.opacity = '0';
+        setTimeout(() => {
+            loading.style.display = 'none';
+        }, 500);
+    }
+});
+
+    </script>
+</body>
+</html>

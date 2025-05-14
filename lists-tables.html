@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KinoLavka - Списки и таблицы. Удобная навигация по фильмам и сериалам.">
+    <meta name="keywords" content="списки, таблицы, фильмы, сериалы, рейтинги">
+    <meta name="theme-color" content="#0f0f1a">
+    <title>KinoLavka - Списки и таблицы</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <div class="loading"></div>
+    
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+        <h1>KinoLavka</h1>
+            </a>
+        <nav>
+            <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="films.html"><i class="fas fa-film"></i> Фильмы</a></li>
+                    <li><a href="series.html"><i class="fas fa-tv"></i> Сериалы</a></li>
+                    <li><a href="gallery.html"><i class="fas fa-images"></i> Фотогалерея</a></li>
+                    <li><a href="registration.html"><i class="fas fa-user-plus"></i> Регистрация</a></li>
+                    <li><a href="lists-tables.html" class="active" aria-current="page"><i class="fas fa-list"></i> Списки и таблицы</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+            </ul>
+        </nav>
+<div class="search">
+                <input type="text" id="searchInput" placeholder="Поиск..." aria-label="Поиск">
+                <button id="searchButton" aria-label="Начать поиск"><i class="fas fa-search"></i></button>
+                <div id="searchResults" class="search-results" role="listbox"></div>
+            </div>
+</div>
+    </header>
+
+    <main class="lists-tables-page">
+        <section class="page-header">
+            <div class="header-content">
+                <h1>Списки и таблицы</h1>
+                <p>Удобная навигация по фильмам и сериалам</p>
+            </div>
+        </section>
+        
+        <section class="lists-tables-section">
+            <div class="lists-tables-container">
+                <!-- Таблица топ-фильмов -->
+                <div class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-trophy"></i> Топ фильмов</h2>
+                        <div class="card-actions">
+                            <select id="filmSort" class="filter-select" style="min-width: 140px;">
+                                <option value="rating">По рейтингу</option>
+                                <option value="year">По году</option>
+                                <option value="name">По названию</option>
+                            </select>
+                            <select id="filmGenre" class="filter-select" style="min-width: 120px;">
+                                <option value="">Все жанры</option>
+                                <option value="Фантастика">Фантастика</option>
+                                <option value="Триллер">Триллер</option>
+                                <option value="Драма">Драма</option>
+                            </select>
+                            <select id="filmYear" class="filter-select" style="min-width: 100px;">
+                                <option value="">Все годы</option>
+                                <option value="2014">2014</option>
+                                <option value="2010">2010</option>
+                                <option value="1994">1994</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="data-table" id="filmsTable">
+            <thead>
+                <tr>
+                                    <th>#</th>
+                                    <th>Название</th>
+                                    <th>Год</th>
+                    <th>Жанр</th>
+                    <th>Рейтинг</th>
+                                    <th>Действия</th>
+                </tr>
+            </thead>
+            <tbody>
+                                <!-- JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Список жанров -->
+                <div class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-film"></i> Жанры</h2>
+                        <div class="card-actions">
+                            <button class="btn-icon" title="Показать все">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="genre-list">
+                        <a href="#" class="genre-item">
+                            <img src="images/genres/action.jpg" alt="Боевики">
+                            <div class="genre-info">
+                                <h3>Боевики</h3>
+                                <span>245 фильмов</span>
+                            </div>
+                        </a>
+                        <a href="#" class="genre-item">
+                            <img src="images/genres/comedy.jpg" alt="Комедии">
+                            <div class="genre-info">
+                                <h3>Комедии</h3>
+                                <span>189 фильмов</span>
+                            </div>
+                        </a>
+                        <a href="#" class="genre-item">
+                            <img src="images/genres/drama.jpg" alt="Драмы">
+                            <div class="genre-info">
+                                <h3>Драмы</h3>
+                                <span>312 фильмов</span>
+                            </div>
+                        </a>
+                        <a href="#" class="genre-item">
+                            <img src="images/genres/horror.jpg" alt="Ужасы">
+                            <div class="genre-info">
+                                <h3>Ужасы</h3>
+                                <span>156 фильмов</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Таблица сериалов -->
+                <div class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-tv"></i> Популярные сериалы</h2>
+                        <div class="card-actions">
+                            <select id="seriesSort" class="filter-select" style="min-width: 140px;">
+                                <option value="rating">По рейтингу</option>
+                                <option value="year">По году</option>
+                                <option value="name">По названию</option>
+                            </select>
+                            <select id="seriesGenre" class="filter-select" style="min-width: 120px;">
+                                <option value="">Все жанры</option>
+                                <option value="Фэнтези">Фэнтези</option>
+                                <option value="Драма">Драма</option>
+                                <option value="Фантастика">Фантастика</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="data-table" id="seriesTable">
+                            <thead>
+                                <tr>
+                                    <th>Название</th>
+                                    <th>Годы</th>
+                                    <th>Жанр</th>
+                                    <th>Сезоны</th>
+                                    <th>Рейтинг</th>
+                                    <th>Действия</th>
+                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- JS -->
+            </tbody>
+        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>О нас</h3>
+                    <p>KinoLavka - ваш надежный источник качественного контента. Мы предлагаем широкий выбор фильмов и сериалов для каждого зрителя.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="about.html">О проекте</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                        <li><a href="privacy.html">Политика конфиденциальности</a></li>
+                        <li><a href="terms.html">Условия использования</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Подпишитесь на новости</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Ваш email" required>
+                        <button type="submit" class="btn">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+        <p>&copy; 2025 KinoLavka. Все права защищены.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Удаление анимации загрузки после загрузки страницы
+        window.addEventListener('load', () => {
+            const loading = document.querySelector('.loading');
+            loading.style.opacity = '0';
+            setTimeout(() => {
+                loading.style.display = 'none';
+            }, 500);
+        });
+
+        // Кнопка прокрутки наверх
+        const scrollTop = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+        });
+
+        scrollTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Обработка кнопок действий в таблицах
+        document.querySelectorAll('.action-buttons .btn-icon').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const action = button.getAttribute('title');
+                const movieName = button.closest('tr').querySelector('.movie-info span').textContent;
+                console.log(`${action} для ${movieName}`);
+            });
+        });
+
+        // --- ДАННЫЕ ФИЛЬМОВ ---
+        const filmsData = [
+            {
+                title: 'Interstellar',
+                year: 2014,
+                genre: 'Фантастика',
+                rating: 9.2,
+                img: 'images/interstellar.jpg',
+                link: 'film-interstellar.html'
+            },
+            {
+                title: 'Inception',
+                year: 2010,
+                genre: 'Триллер',
+                rating: 8.8,
+                img: 'images/inception.jpg',
+                link: 'film-inception.html'
+            },
+            {
+                title: 'Forrest Gump',
+                year: 1994,
+                genre: 'Драма',
+                rating: 9.3,
+                img: 'images/forrest-gump.jpg',
+                link: 'film-forrest-gump.html'
+            }
+        ];
+
+        // --- ДАННЫЕ СЕРИАЛОВ ---
+        const seriesData = [
+            {
+                title: 'Game of Thrones',
+                years: '2011-2019',
+                genre: 'Фэнтези',
+                seasons: 8,
+                rating: 9.3,
+                img: 'images/got.jpg',
+                link: 'series-got.html'
+            },
+            {
+                title: 'Breaking Bad',
+                years: '2008-2013',
+                genre: 'Драма',
+                seasons: 5,
+                rating: 9.5,
+                img: 'images/breaking-bad.jpg',
+                link: 'series-breaking-bad.html'
+            },
+            {
+                title: 'Stranger Things',
+                years: '2016-н.в.',
+                genre: 'Фантастика',
+                seasons: 4,
+                rating: 8.7,
+                img: 'images/stranger-things.jpg',
+                link: 'series-stranger-things.html'
+            }
+        ];
+
+        // --- РЕНДЕР ТАБЛИЦЫ ФИЛЬМОВ ---
+        function renderFilmsTable(data) {
+            const tbody = document.querySelector('#filmsTable tbody');
+            if (!data.length) {
+                tbody.innerHTML = '<tr><td colspan="6" style="text-align:center; color:var(--accent-color); font-weight:600;">Нет фильмов по выбранным фильтрам</td></tr>';
+                return;
+            }
+            tbody.innerHTML = data.map((film, i) => `
+                <tr>
+                    <td>${i + 1}</td>
+                    <td><div class="movie-info"><img src="${film.img}" alt="${film.title}"><span>${film.title}</span></div></td>
+                    <td>${film.year}</td>
+                    <td><span class="genre-tag">${film.genre}</span></td>
+                    <td><div class="rating"><i class="fas fa-star"></i><span>${film.rating}</span></div></td>
+                    <td><div class="action-buttons">
+                        <a href="${film.link}" class="btn-icon" title="Подробнее"><i class="fas fa-info-circle"></i></a>
+                        <button class="btn-icon" title="Добавить в избранное"><i class="far fa-heart"></i></button>
+                    </div></td>
+                </tr>
+            `).join('');
+        }
+
+        // --- РЕНДЕР ТАБЛИЦЫ СЕРИАЛОВ ---
+        function renderSeriesTable(data) {
+            const tbody = document.querySelector('#seriesTable tbody');
+            if (!data.length) {
+                tbody.innerHTML = '<tr><td colspan="6" style="text-align:center; color:var(--accent-color); font-weight:600;">Нет сериалов по выбранным фильтрам</td></tr>';
+                return;
+            }
+            tbody.innerHTML = data.map(ser => `
+                <tr>
+                    <td><div class="movie-info"><img src="${ser.img}" alt="${ser.title}"><span>${ser.title}</span></div></td>
+                    <td>${ser.years}</td>
+                    <td><span class="genre-tag">${ser.genre}</span></td>
+                    <td>${ser.seasons}</td>
+                    <td><div class="rating"><i class="fas fa-star"></i><span>${ser.rating}</span></div></td>
+                    <td><div class="action-buttons">
+                        <a href="${ser.link}" class="btn-icon" title="Подробнее"><i class="fas fa-info-circle"></i></a>
+                        <button class="btn-icon" title="Добавить в избранное"><i class="far fa-heart"></i></button>
+                    </div></td>
+                </tr>
+            `).join('');
+        }
+
+        // --- ФИЛЬТРАЦИЯ И СОРТИРОВКА ФИЛЬМОВ ---
+        function filterAndSortFilmsTable() {
+            let filtered = [...filmsData];
+            const genre = document.getElementById('filmGenre').value;
+            const year = document.getElementById('filmYear').value;
+            const sort = document.getElementById('filmSort').value;
+            if (genre) filtered = filtered.filter(f => f.genre === genre);
+            if (year) filtered = filtered.filter(f => String(f.year) === year);
+            if (sort === 'rating') filtered.sort((a, b) => b.rating - a.rating);
+            else if (sort === 'year') filtered.sort((a, b) => b.year - a.year);
+            else if (sort === 'name') filtered.sort((a, b) => a.title.localeCompare(b.title, 'ru'));
+            renderFilmsTable(filtered);
+        }
+
+        // --- ФИЛЬТРАЦИЯ И СОРТИРОВКА СЕРИАЛОВ ---
+        function filterAndSortSeriesTable() {
+            let filtered = [...seriesData];
+            const genre = document.getElementById('seriesGenre').value;
+            const sort = document.getElementById('seriesSort').value;
+            if (genre) filtered = filtered.filter(s => s.genre === genre);
+            if (sort === 'rating') filtered.sort((a, b) => b.rating - a.rating);
+            else if (sort === 'year') filtered.sort((a, b) => {
+                // Сортируем по году начала сериала
+                const ay = parseInt((a.years + '').split('-')[0]);
+                const by = parseInt((b.years + '').split('-')[0]);
+                return by - ay;
+            });
+            else if (sort === 'name') filtered.sort((a, b) => a.title.localeCompare(b.title, 'ru'));
+            renderSeriesTable(filtered);
+        }
+
+        // --- СЛУШАТЕЛИ ФИЛЬТРОВ ---
+        document.getElementById('filmSort').addEventListener('change', filterAndSortFilmsTable);
+        document.getElementById('filmGenre').addEventListener('change', filterAndSortFilmsTable);
+        document.getElementById('filmYear').addEventListener('change', filterAndSortFilmsTable);
+        document.getElementById('seriesSort').addEventListener('change', filterAndSortSeriesTable);
+        document.getElementById('seriesGenre').addEventListener('change', filterAndSortSeriesTable);
+
+        // --- ПЕРВИЧНЫЙ РЕНДЕР ---
+        renderFilmsTable(filmsData);
+        renderSeriesTable(seriesData);
+</script>
+</body>
+</html>
+
